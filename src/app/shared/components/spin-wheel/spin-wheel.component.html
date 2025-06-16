@@ -1,0 +1,21 @@
+<div class="container">
+  <svg
+    #spinWheel
+    class="wheel"
+    [attr.width]="svgSize"
+    [attr.height]="svgSize"
+    [attr.viewBox]="viewBox"
+  >
+    <g [attr.transform]="'translate(' + radius + ',' + radius + ')'">
+      <!-- Iterate over generated segments and draw each as an SVG path -->
+      @for(segment of segments; track segment; let i = $index) {
+        <path
+          [attr.d]="segment.path"
+          [attr.fill]="segment.color"
+          [attr.stroke]="(currentIndex === i) ? 'white' : 'none'"
+          [attr.stroke-width]="(currentIndex === i) ? '4' : 'none'"
+        ></path>
+      }
+    </g>
+  </svg>
+</div>

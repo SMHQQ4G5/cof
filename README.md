@@ -57,3 +57,51 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+## Folder structure
+/src
+│
+├── app
+│   ├── core
+│   │   ├── services/
+│   │   ├── guards/
+│   │   ├── interceptors/
+│   │   ├── models/
+│   │   └── core.module.ts
+│   │
+│   ├── shared
+│   │   ├── components/
+│   │   ├── directives/
+│   │   ├── pipes/
+│   │   └── shared.module.ts
+│   │
+│   ├── features
+│   │   ├── feature-a/
+│   │   │   ├── components/
+│   │   │   ├── pages/
+│   │   │   ├── services/
+│   │   │   └── feature-a.module.ts
+│   │   └── ...
+│   │
+│   ├── layouts
+│   │   ├── main-layout/
+│   │   ├── auth-layout/
+│   │   └── layout.module.ts
+│   │
+│   ├── store (optional)
+│   │   ├── actions/
+│   │   ├── reducers/
+│   │   ├── selectors/
+│   │   └── effects/
+│   │
+│   ├── app-routing.module.ts
+│   └── app.module.ts
+│
+├── assets/
+├── environments/
+├── styles/
+│   ├── _variables.scss
+│   ├── _mixins.scss
+│   └── main.scss
+└── index.html
+

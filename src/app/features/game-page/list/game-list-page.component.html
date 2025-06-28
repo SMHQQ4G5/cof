@@ -1,0 +1,17 @@
+<h1>Room List</h1>
+<button (click)="createRoom()">Create Room</button>
+
+<div>
+    <ul>
+        @for(room of rooms; track room) {
+            <li>
+                Room ID: {{room.roomId}} <br>
+                Created By: {{room.createdBy}} <br>
+                Bet Amount: {{room.currency}} {{room.betAmount | number: '1.2-2'}} <br>
+                Minimum Players: {{room.minPlayers}} <br>
+                Maximum Players: {{room.maxPlayers}} <br>
+                <button (click)="joinRoom(room.roomId)">Join</button>
+            </li>
+        }
+    </ul>
+</div>

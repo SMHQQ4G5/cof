@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, ElementRef, Input, SimpleChanges, ViewChild } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Subject } from 'rxjs';
-import { ColorSegment } from './model/color-segment.model';
+import { ColorSegment } from './model';
 import { WheelCoordinate } from './model/wheel-coordinate.model';
 
 
@@ -158,7 +158,7 @@ export class SpinWheelComponent {
     }
   }
 
-  currentIndex?: number;
+  currentIndex: number = 0;
   interval: any;
   selectedColor: string | null = null;
   running = false;
@@ -169,9 +169,9 @@ export class SpinWheelComponent {
     if (this.running) return;
     this.running = true;
     this.selectedColor = null;
-    this.currentIndex = 0;
+    // this.currentIndex = 0;
     this.interval = setInterval(() => {
-      this.currentIndex = (this.currentIndex! + 1) % this._colorsInput.length;
+      this.currentIndex = (this.currentIndex + 1) % this._colorsInput.length;
     }, 150);
 
   }

@@ -1,0 +1,20 @@
+[
+    {
+        "roomId": "Room1",
+        "createdBy": "TEST USER",
+        "createdDate": "2025-06-28T10:30:00.000Z",
+        "betAmount": 5,
+        "currency": "PHP",
+        "minPlayers": 5,
+        "maxPlayers": 20
+    },
+    {
+        "roomId": "Room2",
+        "createdBy": "TEST USER2",
+        "createdDate": "2025-06-28T10:30:00.000Z",
+        "betAmount": 5,
+        "currency": "PHP",
+        "minPlayers": 5,
+        "maxPlayers": 15
+    }
+]

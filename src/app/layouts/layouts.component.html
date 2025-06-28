@@ -1,0 +1,10 @@
+<nav>
+    <ul>
+        @for(menu of navMenus; track menu) {
+            <li>
+                <a [routerLink]="menu.path">{{menu.name}}</a>
+            </li> 
+        }
+    </ul>
+</nav>
+<router-outlet />
